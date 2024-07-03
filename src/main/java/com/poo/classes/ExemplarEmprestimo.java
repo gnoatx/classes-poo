@@ -8,9 +8,10 @@ public class ExemplarEmprestimo {
     Emprestimo emprestimo;
     Devolucao devolucao;
 
-    public ExemplarEmprestimo() {
+    public ExemplarEmprestimo(Exemplar exemplar, Emprestimo emprestimo) {
         this.id = ++lastId;
-        System.out.println("ID: " + this.id);
+        this.exemplar = exemplar;
+        this.emprestimo = emprestimo;
     }
 
     public int getId() {

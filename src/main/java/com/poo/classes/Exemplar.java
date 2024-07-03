@@ -6,9 +6,9 @@ public class Exemplar {
     int id;
     Livro livro;
 
-    public Exemplar() {
+    public Exemplar(Livro livro) {
         this.id = ++lastId;
-        System.out.println("ID: " + this.id);
+        this.livro = livro;
     }
 
     public int getId() {

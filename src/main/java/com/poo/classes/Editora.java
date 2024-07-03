@@ -6,9 +6,9 @@ public class Editora {
     int id;
     String nome;
 
-    public Editora() {
+    public Editora(String nome) {
         this.id = ++lastId;
-        System.out.println("ID: " + this.id);
+        this.nome = nome;
     }
 
     public int getId() {

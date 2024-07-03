@@ -1,4 +1,6 @@
 package com.poo.classes;
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Pessoa {
     private static int lastId = 0;
@@ -7,11 +9,16 @@ public class Pessoa {
     private String rg;
     private String cpf;
     private String nome;
+    private LocalDate dataNascimento;
+    private int idade;
     private Endereco endereco;
 
-    public Pessoa() {
+    public Pessoa(String nome, String cpf, LocalDate dataNascimento) {
         this.id = ++lastId;
-        System.out.println("ID: " + this.id);
+        this.nome = nome;
+        this.cpf = cpf;
+        this.dataNascimento = dataNascimento;
+        this.idade = Period.between(dataNascimento, LocalDate.now()).getYears();
     }
 
     public int getId() {
@@ -52,6 +59,19 @@ public class Pessoa {
 
     public String getNome() {
         return nome;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public int getIdade() {
+        idade = Period.between(dataNascimento, LocalDate.now()).getYears();
+        return idade;
     }
 
     public void setEndereco(Endereco endereco) {

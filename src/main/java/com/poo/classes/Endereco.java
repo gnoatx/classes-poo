@@ -10,9 +10,12 @@ public class Endereco {
     String logradouro;
     String complemento;
 
-    public Endereco() {
+    public Endereco(String uf, String cidade, String tipo, String logradouro) {
         this.id = ++lastId;
-        System.out.println("ID: " + this.id);
+        this.uf = uf;
+        this.cidade = cidade;
+        this.tipo = tipo;
+        this.logradouro = logradouro;
     }
 
     public int getId() {

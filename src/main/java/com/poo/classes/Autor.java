@@ -6,9 +6,9 @@ public class Autor {
     int id;
     String nome;
 
-    public Autor() {
+    public Autor(String nome) {
         this.id = ++lastId;
-        System.out.println("ID: " + this.id);
+        this.nome = nome;
     }
 
     public int getId() {

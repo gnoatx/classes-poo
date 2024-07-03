@@ -7,9 +7,9 @@ public class Devolucao {
     int id;
     LocalDate dataDevolucao = LocalDate.now();
 
-    public Devolucao() {
+    public Devolucao(LocalDate dataDevolucao) {
         this.id = ++lastId;
-        System.out.println("ID: " + this.id);
+        this.dataDevolucao = dataDevolucao;
     }
 
     public int getId() {

@@ -11,9 +11,9 @@ public class ClassesApplication {
 		SpringApplication.run(ClassesApplication.class, args);
 		limpa();
 
-		Livro livro1 = new Livro();
-		Endereco enderecoMaria = new Endereco();
-		Pessoa maria = new Pessoa();
+		// Livro livro1 = new Livro();
+		// Endereco enderecoMaria = new Endereco();
+		// Pessoa maria = new Pessoa();
 	}
 
 	static void limpa() {

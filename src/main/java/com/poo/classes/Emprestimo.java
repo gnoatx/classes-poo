@@ -9,9 +9,10 @@ public class Emprestimo {
     LocalDate dataPrevistaDevolucao = LocalDate.now().plusDays(30);
     Pessoa pessoa;
 
-    public Emprestimo() {
+    public Emprestimo(Pessoa pessoa, LocalDate dataEmprestimo) {
         this.id = ++lastId;
-        System.out.println("ID: " + this.id);
+        this.dataEmprestimo = dataEmprestimo;
+        this.pessoa = pessoa;
     }
 
     public int getId() {
@@ -20,6 +21,10 @@ public class Emprestimo {
 
     public LocalDate getDataEmprestimo() {
         return dataEmprestimo;
+    }
+
+    public void setDataPrevistaDevolucao(LocalDate dataPrevistaDevolucao) {
+        this.dataPrevistaDevolucao = dataPrevistaDevolucao;
     }
 
     public LocalDate getDataPrevistaDevolucao() {
