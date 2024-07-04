@@ -16,6 +16,10 @@ public class ClassesApplication {
 		// Pessoa maria = new Pessoa();
 	}
 
+    void menu() {
+        
+    }
+
 	static void limpa() {
 		try {
             if(System.getProperty("os.name").contains("Windows")) {

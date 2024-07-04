@@ -2,16 +2,16 @@ package com.poo.classes;
 import java.time.LocalDate;
 import java.time.Period;
 
-public class Pessoa {
+public abstract class Pessoa {
     private static int lastId = 0;
 
     private int id;
-    private String rg;
-    private String cpf;
-    private String nome;
-    private LocalDate dataNascimento;
-    private int idade;
-    private Endereco endereco;
+    protected String rg;
+    protected String cpf;
+    protected String nome;
+    protected LocalDate dataNascimento;
+    protected int idade;
+    protected Endereco endereco;
 
     public Pessoa(String nome, String cpf, LocalDate dataNascimento) {
         this.id = ++lastId;
