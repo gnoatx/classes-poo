@@ -17,7 +17,12 @@ public class ClassesApplication {
 	}
 
     void menu() {
-        
+        Scanner sc = new Scanner(System.in);
+        String input;
+
+        System.out.println("===== Menu =====");
+        System.out.println("1. Login");
+        System.out.println("");
     }
 
 	static void limpa() {
